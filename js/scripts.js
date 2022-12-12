@@ -1,4 +1,5 @@
 let pokidex = [
+alert('Hello world');
 
     {
         name: 'Squirtle',
@@ -25,4 +26,7 @@ let pokidex = [
         type: ('fighting'),
     },
 
-]
+]let favoriteFood = 'Tacos';
+document.write(favoriteFood);
+let foodrating = '10';
+document.write(foodrating);
