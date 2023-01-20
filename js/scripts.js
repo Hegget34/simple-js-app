@@ -43,13 +43,13 @@ function printArrayDetails() {
 
 /* forEach loop begins */
 pokemonList.forEach(function (pokemon) {
-    if (pokemonList[i].height > 0.5) {
-        document.write(pokemonList[i].name + " - height = " + pokemonList[i].height + " Wow! that's taller than most pokemon" + "<br>");
-    } else if (pokemonList[i].height < 0.5) {
-        document.write(pokemonList[i].name + " - height = " + pokemonList[i].height + " Oh no... That's a very small pokemon" + "<br>");
+    if (pokemon.height > 0.5) {
+        document.write(pokemon.name + " - height = " + pokemon.height + " Wow! that's taller than most pokemon" + "<br>");
+    } else if (pokemon.height < 0.5) {
+        document.write(pokemon.name + " - height = " + pokemon.height + " Oh no... That's a very small pokemon" + "<br>");
     }
 });
 
 pokemonRepository.getAll().forEach(function (pokemon) {
-    document.write(pokemonList.name + pokemonList.height);
+    document.write(pokemon.name + pokemon.height);
 });
