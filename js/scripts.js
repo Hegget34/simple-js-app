@@ -2,31 +2,53 @@
 List of pokemon and details about them
 */
 let pokemonRepository = (function () {
-    let pokemonList = [
+
+    let repository = [
         { ID: "1", name: "Machop", height: 0.8, type: ["Fighting"] },
         { ID: "2", name: "Weedle", height: 0.3, type: ["Bug", "Poison"] },
         { ID: "3", name: "Poliwag", height: 0.3, type: ["Water"] },
-]
+    ]
 
     function add(pokemon) {
-        pokemonList.push(pokemon);
+        if (
+            typeof pokemon === "object" &&
+            "name" in pokemon &&
+            "height" in pokemon &&
+            "types" in pokemon
+        ) {
+            repository.push(pokemon);
+        } else {
+            console.log("pokemon is not correct");
+        }
+    }
+    function getAll() {
+        return repository;
     }
 
-    function getAll() {
-        return pokemonList;
+    function addListItem(pokemon) {
+        let pokemonList = document.querySelector(".pokemon-list");
+        let listpokemon = document.createElement("li");
+        let button = document.createElement("button");
+        button.innerText = pokemon.name;
+        button.classList.add("button-class");
+        listpokemon.appendChild(button);
+        pokemonList.appendChild(listpokemon);
+        button.addEventListener('click', (event) => showDetails(pokemon));
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon);
     }
 
     return {
         add: add,
-        getAll: getAll
+        getAll: getAll,
+        addListItem: addListItem
     };
 })();
 
-/* 
-loop to list heights of pokemon
-*/
+console.log(pokemonRepository.getAll());
 
-/* printArrayDetails function declaration */
 /* For loop
 
 function printArrayDetails() {
@@ -42,14 +64,6 @@ function printArrayDetails() {
 */
 
 /* forEach loop begins */
-pokemonList.forEach(function (pokemon) {
-    if (pokemon.height > 0.5) {
-        document.write(pokemon.name + " - height = " + pokemon.height + " Wow! that's taller than most pokemon" + "<br>");
-    } else if (pokemon.height < 0.5) {
-        document.write(pokemon.name + " - height = " + pokemon.height + " Oh no... That's a very small pokemon" + "<br>");
-    }
-});
-
 pokemonRepository.getAll().forEach(function (pokemon) {
-    document.write(pokemon.name + pokemon.height);
+    pokemonRepository.addListItem(pokemon);
 });
