@@ -11,12 +11,30 @@
 <body>
     <h1>Pokedex</h1>
     <ul class="pokemon-list"></ul>
+    <div id="modal-container">
+        <div class="modal fade show" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="pokemon-modal"
+            padding-right: 18px; aria-modal="true"> 
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"></h2>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 
-</html>// Details are added here for the item
-
+</html>
 
 

@@ -1,6 +1,5 @@
 .button-class {
     background-color: #00d9ff;
-    /* Green */
     border: none;
     color: white;
     padding: 16px 32px;
@@ -15,5 +14,5 @@
     cursor: pointer;
     background-color: rgb(151, 151, 151);
     color: #ffffff;
-    border: 2px solid #00d9ff;
+    border: 2px solid #ffffff;
 }
