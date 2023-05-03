@@ -16,3 +16,11 @@
     color: #ffffff;
     border: 2px solid #ffffff;
 }
+html,
+body {
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    text-align: center;
+}
